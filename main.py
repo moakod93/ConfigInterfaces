@@ -11,7 +11,7 @@ def saveconfig():
     resultsave = ssh_connect.send_command("wr")
     return resultsave
 
-f = open("/home/routers.txt")
+f = open("/home/moakod/PycharmProjects/ConfigInterfaces/routers.txt")
 Routers = f.read().splitlines()
 for router in Routers:
     dev = {
@@ -21,6 +21,7 @@ for router in Routers:
             "password": "cisco"
             }
     ssh_connect = ConnectHandler(**dev)
+    print("Connecting to Router " + str(router))
     while True:
         config = input("want to config an Interface?(y/n)")
         if config == "n":
