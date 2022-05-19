@@ -1,6 +1,6 @@
 from netmiko import ConnectHandler
 
-f = open("~/PycharmProjects/ConfigInterfaces/routers.txt")
+f = open("/home/moakod/PycharmProjects/ConfigInterfaces/routers.txt")
 Routers = f.read().splitlines()
 
 for router in Routers:
